@@ -19,8 +19,8 @@ session_start();
 if (isset($_SESSION['EMAIL'])) {
 
   echo '<p>';
-  echo 'ようこそ' .h($_SESSION['EMAIL']) . "さん";
   echo '<br>';
+  echo 'ようこそ' .h($_SESSION['EMAIL']) . "さん";
   echo '<br>';
   echo '<br>';
   echo '<br>';
@@ -47,9 +47,9 @@ if (isset($_SESSION['EMAIL'])) {
   // echo shell_exec("export LANG=ja_JP.UTF-8; python3 yahoo_news.py 0");
   echo '<br>';
   echo '<br>';
-  echo '<br>';
-  echo '<br>';
   echo "<a href='./setup.html'>セットアップの手順</a>";
+  echo '<br>';
+  echo '<br>';
 
   exit;
 }
@@ -80,6 +80,19 @@ if (isset($_SESSION['EMAIL'])) {
        <input type="password" name="password" class="login">
        <button type="submit" class="login">_____</button>
      </form>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+
+
      <!-- <h1>初めての方はこちら</h1>
      <form action="signUp.php" method="post" class="form">
        <label for="email">E-MAIL</label>

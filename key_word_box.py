@@ -15,5 +15,13 @@ class key_words_box_class:
             key_words = ["石", "医師", "意思", "意志", "遺志", "SixTONES", "STONE"]
             return key_words
 
+        elif(field == "dice"):
+            key_words = ["サイコロ", "コナン", "メガネ"]
+            # key_words = ["サイコロ",　"コナン",　"湖南",　"メガネ"]
+            return key_words
+
+        elif(field == "quake"):
+            key_words = ["地震", "揺れ", "震度", "マグニチュード"]
+            return key_words
         else:
             return []

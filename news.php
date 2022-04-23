@@ -11,18 +11,31 @@
  </head>
  <body>
     <div class="main">
-
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <form action="result.php" method="post">
               <!-- <input type="textarea" name="confirm" value=""> -->
               <select name="confirm" class="form">
                   <!-- <option value="blue">青</option> -->
                   <option value="ZERO">ZERO</option>
                   <option value="STONE">STONE</option>
+                  <option value="DICE">DICE</option>
+                  <option value="QUAKE">QUAKE</option>
               </select>
 
               <input type="submit" value="-----" class="form">
             </form>
-
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
 
 

@@ -19,11 +19,14 @@ class y_news_class():
         # HTMLからニュース一覧に使用しているaタグを絞りこんでいく
         aaa = soup.select(".newsFeed")
         news_tag = soup.select(".newsFeed_item_title") ###
+        # news_tag = soup.select(".newsFeed_item_date") ###
         # news_tag_2 = soup.select(".newsFeed_item")
         # print (news_tag)
 
         for i in range(len(news_tag)):
             news_tag[i] = str(news_tag[i]).replace("<div class=\"newsFeed_item_title\">", "").replace("</div>", "")
+            # news_tag[i] = str(news_tag[i]).replace("<div class=\"newsFeed_item_date\">", "").replace("</div>", "")
+            # print(news_tag[i])
         return news_tag
 
 
