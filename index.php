@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="./home.css">
 <?php
 
 function h($s){
@@ -8,7 +9,7 @@ session_start();
 //ログイン済みの場合
 
 
-  echo '<link rel="stylesheet" href="./home.css">';
+  echo '';
   echo '<title>HallowinGhost</title>';
   echo '<link rel="icon" href="ghost.png"><!-- タイトルにアイコンを設定 -->';
   echo '<link rel="apple-touch-icon" href="icon.png"><!-- iphone のアイコンを設定 -->';
@@ -16,7 +17,9 @@ session_start();
   echo '<div class="main">';
 
 if (isset($_SESSION['EMAIL'])) {
-  echo 'ようこそ' .  h($_SESSION['EMAIL']) . "さん";
+
+  echo '<p>';
+  echo 'ようこそ' .h($_SESSION['EMAIL']) . "さん";
   echo '<br>';
   echo '<br>';
   echo '<br>';
@@ -40,20 +43,6 @@ if (isset($_SESSION['EMAIL'])) {
   echo '<br>';
   echo '<br>';
   echo '<br>';
-  echo '<br>';
-  echo '<br>';
-
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
-  echo '<br>';
   // echo shell_exec("export LANG=ja_JP.UTF-8; python3 script.py");
   // echo shell_exec("export LANG=ja_JP.UTF-8; python3 yahoo_news.py 0");
   echo '<br>';
@@ -66,7 +55,7 @@ if (isset($_SESSION['EMAIL'])) {
 }
 
   echo '</div>';
-
+  echo '</p>';
  ?>
 
 <!DOCTYPE html>
@@ -81,7 +70,7 @@ if (isset($_SESSION['EMAIL'])) {
  <body>
    <div class="main">
      <div class="title_img">
-       <img src="title.png" alt="海の写真" title="タイトル">
+       <img src="title.png" alt="" title="タイトル">
      </div>
      <h1>ようこそ、ログインしてください。</h1>
      <form  action="login.php" method="post" class="form">

@@ -14,13 +14,13 @@
 
             <form action="result.php" method="post">
               <!-- <input type="textarea" name="confirm" value=""> -->
-              <select id="color4" name="confirm">
+              <select name="confirm" class="form">
                   <!-- <option value="blue">青</option> -->
                   <option value="ZERO">ZERO</option>
                   <option value="STONE">STONE</option>
               </select>
 
-              <input type="submit" value="送信">
+              <input type="submit" value="-----" class="form">
             </form>
 
 

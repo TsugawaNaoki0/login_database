@@ -1,12 +1,22 @@
 .main{
   text-align: center;
   margin-top: 10%;
+  font-size: 25px;
+}
+
+p{
+  font-size: 30px;
+}
+
+.form{
+  font-size: 80px;
+}
+
+
+ul{
+  text-align: left;
 }
 
 body{
   background-color:gray;
-}
-
-.form{
-  font-size: 20px;
 }
