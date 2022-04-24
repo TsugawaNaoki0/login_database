@@ -24,6 +24,7 @@
                   <option value="STONE">STONE</option>
                   <option value="DICE">DICE</option>
                   <option value="QUAKE">QUAKE</option>
+                  <option value="5CH">5CH</option>                  
               </select>
 
               <input type="submit" value="-----" class="form">
