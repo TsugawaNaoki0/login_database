@@ -21,7 +21,7 @@ class y_news_class():
         # news_tag = soup.select(".thread") ###
         # news_tag_2 = soup.select(".newsFeed_item")
         # print (news_tag)
-        print("HELLO@@@@@@@@@@@@@@@@@@")
+        """
         # date = soup.select("fnt-small col-sec m-tb-8")
         # date_after = ["" for y in range(len(date))]
         # for i in range(len(date)):
@@ -36,6 +36,8 @@ class y_news_class():
         #             content = str(content).replace(content[0], "")
         #             date_after[i] = content
         #             break
+        """
+
         news_tag = soup.select("a")
         news_tag_after = ["" for x in range(len(news_tag))]
 
@@ -52,9 +54,7 @@ class y_news_class():
                     news_tag_after[i] = content
                     break
 
-
         return news_tag_after
-
 
 
 if __name__ == '__main__':
@@ -66,46 +66,5 @@ if __name__ == '__main__':
     bbb = aaa.y_news(url)
     # print(bbb)
     for i in range(len(bbb)):
-        print(bbb[i])
+        print(bbb[i] + "<br><br>")
         print()
-
-
-    # print("ENTER [x] or [X]")
-    # z = input()
-    #
-    # if (z == "x" or z == "X"):
-    #     news_num = 21        ### yahoo の記事が22 番目まである
-    #     key_words = ["自民"]    ### キーワード(複数可)
-    #     hits = []
-    #     news_books = [[] for j in range(news_num)]
-    #     # theme = ["top-picks", "domestic", "world", "business", "entertainment", "sports", "it", "science", "local"]
-    #     theme = ["top-picks"]
-    #
-    #
-    #     for l in range(len(theme)):
-    #
-    #         for k in range(1, news_num+1):
-    #             # print(theme[l])
-    #             url_url = "https://news.yahoo.co.jp/topics/" + theme[l] + "?page=" + str(k)   ### 最後尾はページ番号
-    #             yyy = y_news_class()
-    #             y_news_data = yyy.y_news(url_url)
-    #
-    #             news_books[k-1] = y_news_data
-    #             # print(news_books[k-1])
-    #             # for i in range(len(y_news_data)):
-    #                 # print(y_news_data[i])
-    #
-    #
-    #
-    #         for n in range(len(key_words)):
-    #             for h in range(len(news_books)):
-    #                 for g in range(len(news_books[h])):
-    #                     ccc = news_books[h][g]
-    #                     # print(news_books[h][g])
-    #                     ddd = ccc.find(key_words[n])
-    #                     if (ddd > -1) :
-    #                         # print(ccc[ddd])
-    #                         hits.append(ccc)
-    #
-    #     for t in range(len(hits)):
-    #         print(hits[t])
