@@ -47,11 +47,13 @@ class y_news_class():
 
 
 if __name__ == '__main__':
+    import urllib.request, urllib.error
+
     # print("ENTER [x] or [X]")
     # z = input()
 
     # if (z == "x" or z == "X"):
-    news_num = 20        ### yahoo の記事のタブの数(ここが変わっている場合がある)
+    news_num = 30        ### yahoo の記事のタブの数(ここが変わっている場合がある)
     # news_num = 3        ### yahoo の記事のタブの数(ここが変わっている場合がある)
     field = sys.argv[1]
     ppp = key_word_box.key_words_box_class()
@@ -73,13 +75,22 @@ if __name__ == '__main__':
         for k in range(1, news_num+1):
             # print(theme[l])
             url_url = "https://news.yahoo.co.jp/topics/" + theme[l] + "?page=" + str(k)   ### 最後尾はページ番号
-            yyy = y_news_class()
-            y_news_data = yyy.y_news(url_url)
 
-            news_books[k-1] = y_news_data
-            # print(news_books[k-1])
+            try:
+                html = urllib.request.urlopen(url_url)
+                print(url_url)
+
+                yyy = y_news_class()
+                y_news_data = yyy.y_news(url_url)
+
+                news_books[k-1] = y_news_data
+            # print(news_books[k-1])            except:
+
             # for i in range(len(y_news_data)):
                     # print(y_news_data[i])
+            except:
+                # print("No URL !!!!!!!!!")
+                break
 
 
 
