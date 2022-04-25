@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
             try:
                 html = urllib.request.urlopen(url_url)
-                print(url_url)
+                # print(url_url)
 
                 yyy = y_news_class()
                 y_news_data = yyy.y_news(url_url)
