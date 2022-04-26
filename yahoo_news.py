@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 import key_word_box
+import changer
+import time
 
 class y_news_class():
     def y_news(self, url):
@@ -30,51 +32,45 @@ class y_news_class():
         return news_tag
 
 
-# class key_words_box_class:
-#     def key_words_box(self, field):
-#         if (field=="0"):
-#             key_words = ["お化け", "おばけ", "霊", "幽霊", "妖怪", "溶解", "容喙", \
-#                         "養会", "容解", "ゼロ",  "ZERO", "広角", "降格", "口角", \
-#                         "高角", "香格", "甲殻", "光角", "高閣", "甲賀区"\
-#                         "Zero", "無", "ゴースト", "亡霊", "ハム", "考案", "公安警察", \
-#                         "公安部", "外事課", "外事", "障害者", "ガイジ", "館長", "官庁", \
-#                         "艦長", "浣腸", "干潮", "管長", "完調", "間諜", "攻殻機動隊"]    ### キーワード(複数可)
-#             return key_words
-#         else:
-#             return []
-
-
-
 
 if __name__ == '__main__':
     import urllib.request, urllib.error
 
     # print("ENTER [x] or [X]")
     # z = input()
+    start = time.time()
 
     # if (z == "x" or z == "X"):
-    news_num = 30        ### yahoo の記事のタブの数(ここが変わっている場合がある)
+    news_num = 3        ### yahoo の記事のタブの数(ここが変わっている場合がある)
     # news_num = 3        ### yahoo の記事のタブの数(ここが変わっている場合がある)
     field = sys.argv[1]
     ppp = key_word_box.key_words_box_class()
     key_words = ppp.key_words_box(field)
-    # key_words = ["お化け", "おばけ", "霊", "幽霊", "妖怪", "溶解", "容喙", \
-    #             "養会", "容解", "ゼロ",  "ZERO", "広角", "降格", "口角", \
-    #             "高角", "香格", "甲殻", "光角", "高閣", "甲賀区"\
-    #             "Zero", "無", "ゴースト", "亡霊", "ハム", "考案", "公安警察", \
-    #             "公安部", "外事課", "外事", "障害者", "ガイジ", "館長", "官庁", \
-    #             "艦長", "浣腸", "干潮", "管長", "完調", "間諜", "攻殻機動隊"]    ### キーワード(複数可)
+    # print(key_words)
+
+    aaa = changer.changer_class()
+    bbb = aaa.changer(key_words)
+    key_words = []
+
+
+    key_words = eval(bbb)
+
+
+
     hits = []
     news_books = [[] for j in range(news_num)]
     # theme = ["top-picks", "domestic", "world", "business", "entertainment", "sports", "it", "science", "local"]
     theme = ["top-picks"]
 
 
+    # """
     for l in range(len(theme)):
-
+        print("[" + theme[l] + "]" + "<br><br>")
+        print()
         for k in range(1, news_num+1):
             # print(theme[l])
             url_url = "https://news.yahoo.co.jp/topics/" + theme[l] + "?page=" + str(k)   ### 最後尾はページ番号
+
 
             try:
                 html = urllib.request.urlopen(url_url)
@@ -84,14 +80,9 @@ if __name__ == '__main__':
                 y_news_data = yyy.y_news(url_url)
 
                 news_books[k-1] = y_news_data
-            # print(news_books[k-1])            except:
 
-            # for i in range(len(y_news_data)):
-                    # print(y_news_data[i])
             except:
-                # print("No URL !!!!!!!!!")
                 break
-
 
 
         for n in range(len(key_words)):
@@ -107,3 +98,6 @@ if __name__ == '__main__':
     # print(sys.argv[1])
     for t in range(len(hits)):
             print(hits[t] + "<br><br>")
+    # """
+    finish = time.time()
+    # print("TIME: " + str(finish - start)

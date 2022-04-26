@@ -20,11 +20,11 @@
               <!-- <input type="textarea" name="confirm" value=""> -->
               <select name="confirm" class="form">
                   <!-- <option value="blue">青</option> -->
-                  <option value="ZERO">ZERO</option>
+                  <option value="GHOST">GHOST</option>
                   <option value="STONE">STONE</option>
                   <option value="DICE">DICE</option>
                   <option value="QUAKE">QUAKE</option>
-                  <option value="5CH">5CH</option>                  
+                  <option value="5CH">5CH</option>
               </select>
 
               <input type="submit" value="-----" class="form">
