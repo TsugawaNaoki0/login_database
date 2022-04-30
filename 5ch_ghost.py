@@ -41,11 +41,37 @@ class y_news_class():
         news_tag = soup.select("a")
         news_tag_after = ["" for x in range(len(news_tag))]
 
+        # print(news_tag)
+        # print(len(news_tag))
+        for i in range(len(news_tag)):
+            if (i%2 == 0):
+                print(news_tag[i])
+                print("<br>")
+                print("<br>")
+
+
+
+
+
+
         for i in range(len(news_tag)):
 
             content = news_tag[i]
             content = str(content)
 
+            # for i in range(len(content)):
+            #     print(content[i])
+
+            # print(type(content))
+
+            # for j in range(len(content)):
+            #     if (content[0] == ">"):
+            #         content = str(content).replace(content[0], "")
+
+            # print(content)
+
+
+            """
             for j in range(len(content)):
                 if (content[0] != ">"):
                     content = str(content).replace(content[0], "")
@@ -53,6 +79,7 @@ class y_news_class():
                     content = str(content).replace(content[0], "")
                     news_tag_after[i] = content
                     break
+            """
 
         return news_tag_after
 
@@ -65,6 +92,6 @@ if __name__ == '__main__':
     aaa = y_news_class()
     bbb = aaa.y_news(url)
     # print(bbb)
-    for i in range(len(bbb)):
-        print(bbb[i] + "<br><br>")
-        print()
+    # for i in range(len(bbb)):
+    #     print(bbb[i] + "<br><br>")
+    #     print()
