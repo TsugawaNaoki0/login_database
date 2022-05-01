@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="./home.css">
+
+
 <?php
 
 require_once('config.php');
@@ -19,16 +22,33 @@ try {
 }
 //emailがDB内に存在しているか確認
 if (!isset($row['email'])) {
+  echo '<div class="main">';
+  echo '<br>';
   echo 'メールアドレス又はパスワードが間違っています。';
+  echo '<br>';
+  echo '</div>';
+
   return false;
 }
 //パスワード確認後sessionにメールアドレスを渡す
 if (password_verify($_POST['password'], $row['password'])) {
   session_regenerate_id(true); //session_idを新しく生成し、置き換える
   $_SESSION['EMAIL'] = $row['email'];
+  echo '<div class="main">';
+  echo '<br>';
   echo 'ログインしました';
+  echo '<br>';
+  echo '<br>';
   echo "<a href='./index.php'>HOME</a>";
+  echo '<br>';
+  echo '<br>';
+  echo '</div>';
+
 } else {
+  echo '<div class="main">';
+  echo '<br>';
   echo 'メールアドレス又はパスワードが間違っています。';
+  echo '<br>';
+  echo '</div>';
   return false;
 }
