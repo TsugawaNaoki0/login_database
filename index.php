@@ -71,12 +71,16 @@ if (isset($_SESSION['EMAIL'])) {
      <div class="title_img">
        <img src="title.png" alt="" title="タイトル">
      </div>
-     <h1>ようこそ、ログインしてください。</h1>
+     <h1>LOGIN</h1>
      <form  action="login.php" method="post" class="login">
-       <label for="email">E-MAIL</label>
-       <input type="email" name="email" class="login">
-       <label for="password">PASSWORD</label>
-       <input type="password" name="password" class="login">
+       <!-- <label for="email">E-MAIL</label> -->
+       <input type="email" name="email" class="login" placeholder="E-MAIL" required>
+       <br>
+       <br>
+       <!-- <label for="password">PASSWORD</label> -->
+       <input type="password" name="password" class="login" placeholder="PASSWORD" required>
+       <br>
+       <br>
        <button type="submit" class="login">_____</button>
      </form>
      <br>
