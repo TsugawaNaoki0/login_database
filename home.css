@@ -52,7 +52,13 @@ p{
   font-size: 80px;
 }
 
-.login, .new_comer{
+.login{
+  font-size: 30px;
+  height: 50px;
+  text-align: center;
+}
+
+.new_comer{
   font-size: 30px;
   height: 50px;
   text-align: center;
