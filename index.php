@@ -23,6 +23,8 @@ if (isset($_SESSION['EMAIL'])) {
   echo 'ようこそ' .h($_SESSION['EMAIL']) . "さん";
   echo '<br>';
   echo '<br>';
+  echo '<br>';
+  echo '<br>';
   echo "<h2><a href='./organized_homepage/index.html'>ホームページ</a></h2>";
   echo "<h2><a href='http://35.81.113.142/' target='_blank'>Pleasanter</a></h2>";
   echo "<h2><a href='./news.php'>ニュース</a></h2>";
@@ -52,11 +54,12 @@ if (isset($_SESSION['EMAIL'])) {
     <link rel="apple-touch-icon" href="icon.png"><!-- iphone のアイコンを設定 -->
  </head>
  <body>
+   <div id="cursor"></div>
    <div class="main">
      <div class="title_img">
        <img src="title.png" alt="" title="タイトル">
      </div>
-     <h1>LOGIN</h1>
+     <h1><font color="white">LOGIN</font></h1>
      <form  action="login.php" method="post" class="login">
        <!-- <label for="email">E-MAIL</label> -->
        <input type="email" name="email" class="login" placeholder="E-MAIL" required>
