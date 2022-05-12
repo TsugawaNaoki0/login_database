@@ -25,6 +25,7 @@ if (isset($_SESSION['EMAIL'])) {
   echo '<br>';
   echo '<br>';
   echo '<br>';
+  echo '<br>';
   echo "<h2><a href='./organized_homepage/index.html'>ホームページ</a></h2>";
   echo "<h2><a href='http://35.81.113.142/' target='_blank'>Pleasanter</a></h2>";
   echo "<h2><a href='http://35.85.44.235/glpi/index.php?noAUTO=1' target='_blank'>GLPI</a></h2>";
@@ -61,6 +62,32 @@ if (isset($_SESSION['EMAIL'])) {
        <img src="title.png" alt="" title="タイトル">
      </div>
      <h1><font color="white">LOGIN</font></h1>
+
+
+
+     <?php
+     // 設定
+     $file= "./count.txt"; // カウント値保存ファイル
+     $keta= 7; // 表示させる桁数指定
+
+     // ファイルがあれば値を取り出し、なければ0値を＋１して書き込み保存
+     $count= file_exists($file) ? rtrim(file_get_contents($file)) : 0;
+     $count++; // カウント値を１上げる
+     file_put_contents($file, $count, LOCK_EX); // 上げた値を保存
+
+
+     // カウント表示
+     printf("あなたは%0{$keta}d番目の訪問者です。", $count);
+
+
+     ?>
+
+
+
+
+
+
+
      <form  action="login.php" method="post" class="login">
        <!-- <label for="email">E-MAIL</label> -->
        <input type="email" name="email" class="login" placeholder="E-MAIL" required>
