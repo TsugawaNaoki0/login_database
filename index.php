@@ -23,6 +23,13 @@ if (isset($_SESSION['EMAIL'])) {
   echo 'ようこそ' .h($_SESSION['EMAIL']) . "さん";
   echo '<br>';
   echo '<br>';
+  echo '<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+  <td align="center">
+  <img src="http://www.rays-counter.com/d507_f6_010/627cfa31a0715/" alt="アクセスカウンター" border="0" width="20">
+  </td>
+  </tr>
+  </table>';
   echo '<br>';
   echo '<br>';
   echo '<br>';
@@ -56,36 +63,36 @@ if (isset($_SESSION['EMAIL'])) {
     <link rel="apple-touch-icon" href="icon.png"><!-- iphone のアイコンを設定 -->
  </head>
  <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    <div id="cursor"></div>
    <div class="main">
      <div class="title_img">
        <img src="title.png" alt="" title="タイトル">
      </div>
+
+
+
+
+
+
+
+
      <h1><font color="white">LOGIN</font></h1>
 
-
-
-     <?php
-     // 設定
-     $file= "./count.txt"; // カウント値保存ファイル
-     $keta= 7; // 表示させる桁数指定
-
-     // ファイルがあれば値を取り出し、なければ0値を＋１して書き込み保存
-     $count= file_exists($file) ? rtrim(file_get_contents($file)) : 0;
-     $count++; // カウント値を１上げる
-     file_put_contents($file, $count, LOCK_EX); // 上げた値を保存
-
-
-     // カウント表示
-     printf("あなたは%0{$keta}d番目の訪問者です。", $count);
-
-
-     ?>
-
-
-
-
-
+     <!--タグはここから-->
 
 
      <form  action="login.php" method="post" class="login">
