@@ -64,31 +64,11 @@ if (isset($_SESSION['EMAIL'])) {
  </head>
  <body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
    <div id="cursor"></div>
    <div class="main">
      <div class="title_img">
        <img src="title.png" alt="" title="タイトル">
      </div>
-
-
-
-
-
-
-
 
      <h1><font color="white">LOGIN</font></h1>
 

@@ -11,6 +11,12 @@
   elseif ($_POST["confirm"]=="DICE"){
     echo shell_exec("export LANG=ja_JP.UTF-8; python3 yahoo_news.py dice");
   }
+  elseif ($_POST["confirm"]=="KAIDAN"){
+    echo shell_exec("export LANG=ja_JP.UTF-8; python3 yahoo_news.py kaidan");
+  }
+  elseif ($_POST["confirm"]=="HOUSE"){
+    echo shell_exec("export LANG=ja_JP.UTF-8; python3 yahoo_news.py house");
+  }
   elseif ($_POST["confirm"]=="QUAKE"){
     echo shell_exec("export LANG=ja_JP.UTF-8; python3 yahoo_news.py quake");
   }

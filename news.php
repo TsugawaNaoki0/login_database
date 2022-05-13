@@ -23,6 +23,8 @@
                   <option value="GHOST">GHOST</option>
                   <option value="STONE">STONE</option>
                   <option value="DICE">DICE</option>
+                  <option value="KAIDAN">KAIDAN</option>
+                  <option value="HOUSE">HOUSE</option>
                   <option value="QUAKE">QUAKE</option>
                   <option value="5CH">5CH</option>
               </select>
