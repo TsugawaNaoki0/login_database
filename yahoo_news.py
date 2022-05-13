@@ -62,10 +62,11 @@ if __name__ == '__main__':
     # theme = ["top-picks", "domestic", "world", "business", "entertainment", "sports", "it", "science", "local"]
     theme = ["top-picks"]
 
+    print("[" + field + "]" + "<br><br>")
 
     # """
     for l in range(len(theme)):
-        print("[" + theme[l] + "]" + "<br><br>")
+        # print("[" + theme[l] + "]" + "<br><br>")
         print()
         for k in range(1, news_num+1):
             # print(theme[l])
