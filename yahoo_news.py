@@ -61,8 +61,11 @@ if __name__ == '__main__':
     news_books = [[] for j in range(news_num)]
     # theme = ["top-picks", "domestic", "world", "business", "entertainment", "sports", "it", "science", "local"]
     theme = ["top-picks"]
-
-    print("[" + field + "]" + "<br><br>")
+    print("<br><br>")
+    print("<br><br>")
+    print("<br><br>")
+    print("<div align='center'>")
+    print("[" + field.upper() + "]" + "<br><br>")
 
     # """
     for l in range(len(theme)):
@@ -99,6 +102,7 @@ if __name__ == '__main__':
     # print(sys.argv[1])
     for t in range(len(hits)):
             print(hits[t] + "<br><br>")
+    print("</div>")
     # """
     finish = time.time()
     # print("TIME: " + str(finish - start)
