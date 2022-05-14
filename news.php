@@ -25,6 +25,7 @@
                   <option value="DICE">DICE</option>
                   <option value="KAIDAN">KAIDAN</option>
                   <option value="HOUSE">HOUSE</option>
+                  <option value="SWEEP">SWEEP</option>
                   <option value="QUAKE">QUAKE</option>
                   <option value="5CH">5CH</option>
               </select>

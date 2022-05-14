@@ -40,7 +40,6 @@ if (isset($_SESSION['EMAIL'])) {
   echo "<h2><a href='https://www.netflix.com/browse' target='_blank'>NETFLIX</a></h2>";
   echo "<h2><a href='https://saizeria-gacha.web.app/' target='_blank'>サイゼリヤN円ガチャ</a></h2>";
   echo '<br>';
-  echo "<h2><a href='./setup.html'>セットアップの手順</a></h2>";
   echo '<br>';
   echo "<h2><a href='/logout.php'>ログアウトはこちら。</a></h2>";
   echo '<br>';
