@@ -1,5 +1,21 @@
 <?php
 require_once('config.php');
+
+
+if (!isset($_POST['q2'])){
+  echo '利用規約に同意してください。';
+  return false;
+}
+
+if ($_POST['password1'] != $_POST['password2']){
+  echo 'パスワードが一致しません。';
+  return false;
+}
+
+
+
+
+
 //データベースへ接続、テーブルがない場合は作成
 try {
   $pdo = new PDO(DSN, DB_USER, DB_PASS);
@@ -19,8 +35,8 @@ if (!$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   return false;
 }
 //パスワードの正規表現
-if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i', $_POST['password'])) {
-  $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i', $_POST['password1'])) {
+  $password = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 } else {
   echo 'パスワードは半角英数字をそれぞれ1文字以上含んだ8文字以上で設定してください。';
   return false;

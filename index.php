@@ -41,6 +41,9 @@ if (isset($_SESSION['EMAIL'])) {
   echo "<h2><a href='https://saizeria-gacha.web.app/' target='_blank'>サイゼリヤN円ガチャ</a></h2>";
   echo '<br>';
   echo '<br>';
+  echo '<a href="./riyoukiyaku.html">利用規約</a>';
+  echo '<br>';
+  echo '<br>';
   echo "<h2><a href='/logout.php'>ログアウトはこちら。</a></h2>";
   echo '<br>';
   echo '<br>';
@@ -68,22 +71,28 @@ if (isset($_SESSION['EMAIL'])) {
      <div class="title_img">
        <img src="title.png" alt="" title="タイトル">
      </div>
-
+<a href="sms:お店の携帯番号">ショートメールで問い合わせする</a>
      <h1><font color="white">LOGIN</font></h1>
 
      <!--タグはここから-->
 
 
      <form  action="login.php" method="post" class="login">
-       <!-- <label for="email">E-MAIL</label> -->
        <input type="email" name="email" class="login" placeholder="E-MAIL" required>
        <br>
        <br>
-       <!-- <label for="password">PASSWORD</label> -->
        <input type="password" name="password" class="login" placeholder="PASSWORD" required>
        <br>
        <br>
        <button type="submit" class="login">_____</button>
+       <br>
+       <br>
+       <!-- <input type="checkbox" name="q2" value="">
+       <label for="q2"><a href="./riyoukiyaku.html">利用規約</a>に同意する</label> -->
+
+       <br>
+       <br>
+
      </form>
      <br>
      <br>
