@@ -45,7 +45,21 @@
                 echo shell_exec("export LANG=ja_JP.UTF-8; python3 5ch_ghost.py 5ch");
               }
              ?>
-
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
     </div>
 
  </body>
