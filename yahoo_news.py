@@ -101,12 +101,12 @@ if __name__ == '__main__':
                         hits.append(ccc)
 
 
-    print(type(hits[0]))
-    f = open('out.csv', 'w')
-    # data = ['あいうえお','12345']
-    writer = csv.writer(f)
-    writer.writerow(hits)
-    f.close()
+    # print(type(hits[0]))
+    # f = open('out.csv', 'w')
+    # # data = ['あいうえお','12345']
+    # writer = csv.writer(f)
+    # writer.writerow(hits)
+    # f.close()
 
     # print(sys.argv[1])
     for t in range(len(hits)):
