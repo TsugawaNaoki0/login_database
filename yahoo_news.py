@@ -5,6 +5,39 @@ import key_word_box
 import changer
 import time
 import csv
+from email.mime.text import MIMEText
+import smtplib
+
+
+
+class quake_mail_class():
+    def quake_mail(self, quake_news, field):
+
+        # SMTP認証情報
+        account = "subaodezhen641@gmail.com"
+        # password = "19960701jishin"
+        password = "ubqrmyfjgxsojiwg"
+
+        # 送受信先
+        to_email = "jinchuanzhishu76@gmail.com"
+        from_email = "subaodezhen641@gmail.com"
+
+        # MIMEの作成
+        subject = field.upper()
+        # message = "地震速報"
+        message = quake_news
+        msg = MIMEText(message, "html")
+        msg["Subject"] = subject
+        msg["To"] = to_email
+        msg["From"] = from_email
+
+        # メール送信処理
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login(account, password)
+        server.send_message(msg)
+        server.quit()
+
 
 class y_news_class():
     def y_news(self, url):
@@ -107,6 +140,11 @@ if __name__ == '__main__':
     # writer = csv.writer(f)
     # writer.writerow(hits)
     # f.close()
+    message = str(hits)
+    print(message)
+    aaa= quake_mail_class()
+    bbb = aaa.quake_mail(message, field)
+
 
     # print(sys.argv[1])
     for t in range(len(hits)):
