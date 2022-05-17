@@ -4,6 +4,7 @@ import sys
 import key_word_box
 import changer
 import time
+import csv
 
 class y_news_class():
     def y_news(self, url):
@@ -98,6 +99,14 @@ if __name__ == '__main__':
                     if (ddd > -1) :
                         # print(ccc[ddd])
                         hits.append(ccc)
+
+
+    print(type(hits[0]))
+    f = open('out.csv', 'w')
+    # data = ['あいうえお','12345']
+    writer = csv.writer(f)
+    writer.writerow(hits)
+    f.close()
 
     # print(sys.argv[1])
     for t in range(len(hits)):
