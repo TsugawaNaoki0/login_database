@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+    <meta charset="utf-8">
+       <link rel="stylesheet" href="./home.css">
+          <title>HallowinGhost</title>
+      <link rel="icon" href="icon.png"><!-- タイトルにアイコンを設定 -->
+          <link rel="apple-touch-icon" href="icon.png"><!-- iphone のアイコンを設定 -->
+    </head>
+      <body>
+          <div class="main">
+      <h1>ubuntu 16.04 LTS</h1>
+      <br>
+      <br>
+      <ul>
+        <li>
+          sudo su <br>
+          apt-get update <br>
+          yes | apt-get install apache2 <br>
+          apt update;apt install -y php <br>
+        </li>
+        <br>
+        <li>
+          yes | apt install mysql-server mysql-client
+        </li>
+        <br>
+        <li>
+          [password] <br>
+        </li>
+        <li>
+          [password]
+        </li>
+        <br>
+        <li>
+          mysql -u root -p <br>
+        </li>
+        <br>
+        <li>
+          [password] <br>
+        </li>
+        <br>
+        <li>
+          create database mail_pass; <br>
+          exit;
+        </li>
+        <br>
+        <li>
+          cd /var/www/ <br>
+          rm -rf html <br>
+          mkdir html <br>
+          cd html/ <br>
+          git clone https://github.com/TsugawaNaoki0/organized_homepage.git <br>
+          git clone https://github.com/TsugawaNaoki0/login_database.git <br>
+          mv ./login_database/* ./ <br>
+          sudo a2enmod proxy_fcgi setenvif <br>
+          sudo a2enconf php7.0-fpm <br>
+          sudo service apache2 restart <br>
+          apt install php-pdo <br>
+          yes | apt install php-mysql <br>
+          apt-get install language-pack-ja-base language-pack-ja <br>
+          locale-gen ja_JP.UTF-8 <br>
+          echo export LANG=ja_JP.UTF-8 >> ~/.profile <br>
+          source ~/.profile <br>
+        </li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </body>
+</html>

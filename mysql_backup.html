@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="./home.css">
+      <title>HallowinGhost</title>
+      <link rel="icon" href="icon.png"><!-- タイトルにアイコンを設定 -->
+      <link rel="apple-touch-icon" href="icon.png"><!-- iphoneのアイコンを設定 -->
+  </head>
+  <body>
+    <div class="main">
+    <h1>MySQL のバックアップ・復元等</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>特定のデータベースのみバックアップする方法</h2>
+    <ul>
+      <li>
+          mysqldump --single-transaction -u DBユーザ名 -p DB名 > 出力先ファイル名 <br><br>
+          mysqldump --single-transaction -u root -p mail_pass > ./qwertyCopy.dump <br><br>
+          [password]
+      </li>
+    </ul>
+    <br>
+    <h2>全てのデータベースをバックアップする方法</h2>
+    <ul>
+      <li>
+          mysqldump --single-transaction -u root -p -x --all-databases > ./qwertyCopy.dump
+      </li>
+    </ul>
+    <br>
+    <h2>復元</h2>
+    <h3>特定のデータベースのみ復元する方法</h3>
+    <ul>
+      <li>
+          mysql -u ユーザー名 -p データベース名 < dumpファイル名
+      </li>
+      <li>
+          mysql -u root -p mail_pass < ./qwertyCopy.dump
+      </li>
+    </ul>
+    <br>
+    <h3>全てのデータベースを復元する方法</h3>
+    <ul>
+      <li>
+          mysql -u ユーザー名 -p < dumpファイル名
+      </li>
+      <li>
+          mysql -u root -p < ./qwertyCopy.dump
+      </li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+ </body>
+</html>
