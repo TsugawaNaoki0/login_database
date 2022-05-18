@@ -141,7 +141,7 @@ if __name__ == '__main__':
     # writer.writerow(hits)
     # f.close()
     message = str(hits)
-    print(message)
+    # print(message)
     aaa= quake_mail_class()
     bbb = aaa.quake_mail(message, field)
 
