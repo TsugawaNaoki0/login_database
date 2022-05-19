@@ -107,7 +107,7 @@ if (isset($_SESSION['EMAIL'])) {
      <br>
      <br>
      <br>
-     <form  action="qr_code.php" method="post" class="qrcode">
+     <!-- <form  action="qr_code.php" method="post" class="qrcode">
        <input type="email" name="email" class="qrcode" placeholder="E-MAIL" required>
        <br>
        <br>
@@ -118,11 +118,7 @@ if (isset($_SESSION['EMAIL'])) {
        <br>
        <!-- <input type="checkbox" name="q2" value="">
        <label for="q2"><a href="./riyoukiyaku.html">利用規約</a>に同意する</label> -->
-
-       <br>
-       <br>
-
-     </form>
+     <!-- </form> -->
      <br>
      <br>
      <br>
