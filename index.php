@@ -63,6 +63,7 @@ if (isset($_SESSION['EMAIL'])) {
    <title>HallowinGhost</title>
     <link rel="icon" href="ghost.png"><!-- タイトルにアイコンを設定 -->
     <link rel="apple-touch-icon" href="icon.png"><!-- iphone のアイコンを設定 -->
+    <meta name="robots" content="noindex">
  </head>
  <body>
 
