@@ -70,3 +70,17 @@ ul{
 
 body{
 }
+
+.kiyaku{
+  width: 50%;
+  margin-left: 20%;
+  color: white;
+  margin-top: 10%;
+  font-size: 25px;
+  color: white;
+  /* background-color:gray; */
+  background-color:gray;
+  background-image : url("./sakura.gif");
+  background-size: cover;
+  padding: 5%;
+}
