@@ -142,8 +142,9 @@ if __name__ == '__main__':
     # f.close()
     message = str(hits)
     # print(message)
-    aaa= quake_mail_class()
-    bbb = aaa.quake_mail(message, field)
+
+    ### # aaa= quake_mail_class()
+    ### # bbb = aaa.quake_mail(message, field)
 
 
     # print(sys.argv[1])
