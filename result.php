@@ -52,7 +52,22 @@
                 echo shell_exec("export LANG=ja_JP.UTF-8; python3 yahoo_news.py green");
               }
               elseif ($_POST["confirm"]=="5CH"){
-                echo shell_exec("export LANG=ja_JP.UTF-8; python3 5ch_ghost.py 5ch");
+                echo shell_exec("export LANG=ja_JP.UTF-8; python3 5ch_ghost.py");
+              }
+              elseif ($_POST["confirm"]=="WITCH"){
+                echo shell_exec("export LANG=ja_JP.UTF-8; python3 rikon.py ");
+              }
+              elseif ($_POST["confirm"]=="NO6"){
+                echo shell_exec("export LANG=ja_JP.UTF-8; python3 idol.py ");
+              }
+              elseif ($_POST["confirm"]=="WITCH"){
+                echo shell_exec("export LANG=ja_JP.UTF-8; python3 rikon.py ");
+              }
+              elseif ($_POST["confirm"]=="WITCH"){
+                echo shell_exec("export LANG=ja_JP.UTF-8; python3 rikon.py ");
+              }
+              elseif ($_POST["confirm"]=="HATE"){
+                echo shell_exec("export LANG=ja_JP.UTF-8; python3 hate.py ");
               }
              ?>
              <br>
