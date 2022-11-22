@@ -11,6 +11,9 @@
     <link rel="apple-touch-icon" href="icon.png"><!-- iphone のアイコンを設定 -->
  </head>
  <body>
+   <?php
+      echo shell_exec("export LANG=ja_JP.UTF-8; python3 ./log.py ".$_SERVER['PHP_SELF']);
+   ?>
     <div class="main">
             <br>
             <br>

@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+echo shell_exec("export LANG=ja_JP.UTF-8; python3 ./log.py ".$_SERVER['PHP_SELF']);
+
 $output = '';
 if (isset($_SESSION["EMAIL"])) {
   $output = 'Logoutしました。';

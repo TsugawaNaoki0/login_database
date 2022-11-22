@@ -8,6 +8,9 @@ require_once('config.php');
 session_start();
 //POSTのvalidate
 
+echo shell_exec("export LANG=ja_JP.UTF-8; python3 log.py ".$_SERVER['PHP_SELF']);
+
+
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   echo '入力された値が不正です。';
   return false;

@@ -8,6 +8,13 @@ function h($s){
 session_start();
 //ログイン済みの場合
 
+  // echo shell_exec("export LANG=ja_JP.UTF-8; python3 revolving.py ".$_POST["confirm0"]." ".$_POST["confirm1"]." ".$_POST["confirm2"]);
+  // echo shell_exec("export LANG=ja_JP.UTF-8; python3 graph_maker.py ".$_POST["confirm1"]." ".$_POST["confirm2"]);
+  // $fileName = basename(__FILE__);
+  // echo shell_exec("export LANG=ja_JP.UTF-8; python3 sample.py ".$fileName);
+  // echo shell_exec("export LANG=ja_JP.UTF-8; python3 sample.py index.php");
+  echo shell_exec("export LANG=ja_JP.UTF-8; python3 log.py ".$_SERVER['PHP_SELF']);
+
 
   echo '';
   echo '<title>HallowinGhost</title>';
@@ -33,7 +40,7 @@ if (isset($_SESSION['EMAIL'])) {
   echo '<br>';
   echo '<br>';
   echo '<br>';
-  echo "<h2><a href='./organized_homepage/index.html'>ホームページ</a></h2>";
+  echo "<h2><a href='./organized_homepage/index.php'>ホームページ</a></h2>";
   echo "<h2><a href='http://35.81.113.142/' target='_blank'>Pleasanter</a></h2>";
   echo "<h2><a href='http://35.85.44.235/glpi/index.php?noAUTO=1' target='_blank'>GLPI</a></h2>";
   echo "<h2><a href='./news.php'>ニュース</a></h2>";
@@ -42,12 +49,14 @@ if (isset($_SESSION['EMAIL'])) {
   echo "<h2><a href='https://saizeria-gacha.web.app/' target='_blank'>サイゼリヤN円ガチャ</a></h2>";
   echo '<br>';
   echo '<br>';
-  echo '<a href="./riyoukiyaku.html">利用規約</a>';
+  echo "<a href=\"./riyoukiyaku.html\">利用規約</a>";
   echo '<br>';
   echo '<br>';
   echo "<h2><a href='/logout.php'>ログアウトはこちら。</a></h2>";
   echo '<br>';
   echo '<br>';
+
+
 
   exit;
 }
@@ -73,7 +82,7 @@ if (isset($_SESSION['EMAIL'])) {
      <div class="title_img">
        <img src="title.png" alt="" title="タイトル">
      </div>
-<a href="sms:お店の携帯番号">ショートメールで問い合わせする</a>
+     <a href="sms:お店の携帯番号">ショートメールで問い合わせする</a>
      <h1><font color="white">LOGIN</font></h1>
 
      <!--タグはここから-->
@@ -132,6 +141,8 @@ if (isset($_SESSION['EMAIL'])) {
      <br>
      <br>
      <br>
+     <!-- <script type="text/javascript"> -->
+
 
 
      <!-- <h1>初めての方はこちら</h1>
@@ -145,7 +156,9 @@ if (isset($_SESSION['EMAIL'])) {
      </form> -->
 
 
-   </div>
+
+
+  </div>
 
  </body>
 </html>
