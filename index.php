@@ -96,7 +96,6 @@ if (isset($_SESSION['EMAIL'])) {
        <br>
        <br>
        <button type="submit" class="login">_____</button>
-       <a href="./bandit/index.html">テスト</a>
        <br>
        <br>
        <!-- <input type="checkbox" name="q2" value="">
