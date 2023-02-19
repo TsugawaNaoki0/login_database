@@ -40,6 +40,10 @@ if (isset($_SESSION['EMAIL'])) {
   echo '<br>';
   echo '<br>';
   echo '<br>';
+  echo '<a href="./20230219_logo.gif">ロゴマーク</a>';
+  echo '<br>';
+  echo '<br>';
+  echo '<br>';
   echo "<h2><a href='./organized_homepage/index.php'>ホームページ</a></h2>";
   echo "<h2><a href='http://35.81.113.142/' target='_blank'>Pleasanter</a></h2>";
   echo "<h2><a href='http://35.85.44.235/glpi/index.php?noAUTO=1' target='_blank'>GLPI</a></h2>";
