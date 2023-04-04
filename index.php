@@ -61,7 +61,7 @@ if (isset($_SESSION['EMAIL'])) {
   echo '<br>';
 
 
-  header("Location:./index.php");
+  // header("Location:./index.php");
   exit;
 }
 
