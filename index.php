@@ -109,10 +109,6 @@ if (isset($_SESSION['EMAIL'])) {
        <br>
 
      </form>
-     <?php
-       header("Location:./index.php");
-       exit();
-     ?>
      <br>
      <br>
      <br>
