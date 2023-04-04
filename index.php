@@ -109,6 +109,10 @@ if (isset($_SESSION['EMAIL'])) {
        <br>
 
      </form>
+     <?php
+       header("Location:./chat.php");
+       exit();
+     ?>
      <br>
      <br>
      <br>
